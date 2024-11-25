@@ -5,11 +5,13 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import UsersScreen from "./screens/UsersScreen";
 import ExperiencesScreen from "./screens/ExperiencesScreen";
 import HomeScreen from "./screens/HomeScreen";
+import SearchScreen from "./screens/SearchScreen";
 
 // Importa las imágenes de los iconos
 import iconoUsuarios from './assets/icons/user.jpg';
 import iconoHome from './assets/icons/home.jpg';
 import iconoExperiencias from './assets/icons/experiencias.jpg';
+import iconoBuscador from './assets/icons/buscador.jpg';
 
 const Tab = createBottomTabNavigator();
 
@@ -28,6 +30,8 @@ export default function App() {
               iconSource = iconoHome; 
             } else if (route.name === 'Experiencias') {
               iconSource = iconoExperiencias; 
+            } else if (route.name === 'Buscador') {
+              iconSource = iconoBuscador; 
             }
 
             // Reducir el tamaño del ícono si está seleccionado o no
@@ -52,6 +56,7 @@ export default function App() {
         <Tab.Screen name="Usuarios" component={UsersScreen} />
         <Tab.Screen name="Home" component={HomeScreen} />
         <Tab.Screen name="Experiencias" component={ExperiencesScreen} />
+        <Tab.Screen name="Buscador" component={SearchScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );

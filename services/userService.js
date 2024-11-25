@@ -1,7 +1,9 @@
 import axios from "axios";
 
-const API_URL = "http://10.0.2.2:3000/api/user"; 
-const EXPERIENCE_URL = "http://10.0.2.2:3000/api/experiencias";
+/*const API_URL = "http://10.0.2.2:3000/api/user"; 
+const EXPERIENCE_URL = "http://10.0.2.2:3000/api/experiencias";*/
+const API_URL = "http://localhost:3000/api/user"; 
+const EXPERIENCE_URL = "http://localhost:3000/api/experiencias";
 
 // Obtener un usuario por su ID
 export const fetchUserById = async (userId) => {
